@@ -1,0 +1,10 @@
+{
+  "name": "piano-notes-practice",
+  "version": "1.0.0",
+  "description": "A kid-friendly piano note-reading game that listens through the microphone",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test test/*.test.js"
+  }
+}
