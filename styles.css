@@ -24,6 +24,9 @@ h2 { margin: 0; font-size: clamp(20px, 3.5vw, 34px); }
 .lead { font-size: clamp(18px, 3vw, 28px); margin: 8px 0; text-align: center; }
 .small-text { text-align: center; font-size: 16px; opacity: 0.8; }
 .error { background: #ffe0e0; border-radius: 16px; padding: 10px 16px; max-width: 560px; }
+.logo { width: clamp(120px, 28vw, 220px); animation: bob 2s ease-in-out infinite; }
+.logo.small { width: 100px; }
+img.mascot { width: 64px; height: 64px; }
 .big-mascot { font-size: clamp(80px, 16vw, 150px); animation: bob 2s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-12px) rotate(3deg); } }
 

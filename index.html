@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Piano Pals 🎹</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🎹%3C/text%3E%3C/svg%3E" />
+    <title>Ava's Piano Pals 🦄</title>
+    <link rel="icon" type="image/svg+xml" href="assets/unicorn.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="clouds" aria-hidden="true"><span>☁️</span><span>☁️</span><span>☁️</span></div>
 
     <section id="welcome" class="screen active">
-      <div class="big-mascot">🐻</div>
-      <h1>Piano Pals</h1>
-      <p class="lead">I will listen while you play the notes!</p>
+      <img class="logo" src="assets/unicorn.svg" alt="Unicorn logo" />
+      <h1>Ava's Piano Pals</h1>
+      <p class="lead">Hi Ava! 🦄 I will listen while you play the notes!</p>
       <button id="start" class="btn primary huge">🎤 Let's play!</button>
       <p id="mic-error" class="error" hidden></p>
     </section>
 
     <section id="menu" class="screen">
       <header class="bar">
-        <h2>Pick a level</h2>
+        <h2>Ava, pick a level! 🦄</h2>
         <button id="open-calib" class="btn small">🎤 Mic check</button>
       </header>
       <div id="levels"></div>
@@ -57,7 +57,7 @@
       <div class="progress"><div id="progress-fill"></div></div>
       <canvas id="lane"></canvas>
       <div class="mascot-row">
-        <div id="mascot" class="mascot">🐻</div>
+        <img id="mascot" class="mascot" src="assets/unicorn.svg" alt="" />
         <div id="bubble" class="bubble">Play the glowing note!</div>
       </div>
       <canvas id="keys"></canvas>
@@ -65,8 +65,8 @@
 
     <div id="done" class="overlay" hidden>
       <div class="card">
-        <div class="big-mascot">🎉</div>
-        <h2>Great job!</h2>
+        <img class="logo small" src="assets/unicorn.svg" alt="" />
+        <h2 id="done-title">Great job, Ava!</h2>
         <div id="stars" class="stars"></div>
         <div class="row">
           <button id="again" class="btn">🔁 Again</button>

@@ -22,7 +22,8 @@ let lastFrame = { midiFloat: null, rms: 0 };
 let simMidi = null; // computer-keyboard fallback for testing without a piano
 let heardMidi = null;
 
-const CHEERS = ['Yay! 🌟', 'You got it! 🎉', 'Great playing! 🎵', 'Wow! ⭐', 'Perfect! 💖', 'Super! 🚀'];
+const NAME = 'Ava';
+const CHEERS = ['Yay, Ava! 🌟', 'You got it! 🎉', 'Great playing! 🎵', 'Wow, Ava! ⭐', 'Perfect! 💖', 'Super! 🦄'];
 const pick = (a) => a[Math.floor(Math.random() * a.length)];
 
 function show(id) {
@@ -101,12 +102,12 @@ function startSong(s) {
   applyBeat();
   $('progress-fill').style.width = '0%';
   $('toggle-letters').classList.toggle('on', store.showLetters);
-  say('Play the glowing note!');
+  say(`${NAME}, play the glowing note!`);
   show('game');
 }
 
 function celebrate(stars) {
-  const text = stars === 3 ? 'Fantastic! Great job!' : stars === 2 ? 'Great job!' : 'Good try! Keep practicing!';
+  const text = stars === 3 ? `Fantastic! Great job, ${NAME}!` : stars === 2 ? `Great job, ${NAME}!` : `Good try, ${NAME}! Keep practicing!`;
   if (!('speechSynthesis' in window)) return;
   setTimeout(() => {
     const u = new SpeechSynthesisUtterance(text);
@@ -195,6 +196,7 @@ function onGameEvent(type, d) {
     save(store);
     muteFor(synth.cheer());
     celebrate(d.stars);
+    $('done-title').textContent = d.stars === 3 ? `Amazing, ${NAME}! 🦄` : d.stars === 2 ? `Great job, ${NAME}!` : `Good try, ${NAME}!`;
     $('stars').textContent = '⭐'.repeat(d.stars) + '☆'.repeat(3 - d.stars);
     const idx = SONGS.indexOf(song);
     $('next').hidden = idx === SONGS.length - 1;
