@@ -7,7 +7,7 @@ export const CONFIG = {
   idleMsForLetterHint: 15000,
   idleMsForKeyboardHint: 25000,
   releaseSilenceMs: 120,
-  onsetRatio: 2,
+  onsetRatio: 1.5,
   defaultBeatMs: 800, // assumed quarter-note length until her own pace is known
 };
 
@@ -107,7 +107,7 @@ export class Game {
   // Lets the same key be played twice in a row: a pause or a fresh attack re-arms judging.
   _trackRelease(now, heard, rms) {
     if (rms < this.minRms) this.minRms = rms;
-    const onset = rms > Math.max(this.minRms * this.cfg.onsetRatio, 0.02);
+    const onset = rms > Math.max(this.minRms * this.cfg.onsetRatio, 0.006);
     if (heard === null) {
       this.silentSince ??= now;
       if (now - this.silentSince >= this.cfg.releaseSilenceMs) this._rearm();
