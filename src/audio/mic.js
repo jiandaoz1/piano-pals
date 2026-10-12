@@ -1,7 +1,7 @@
 import { detectPitch, rms, toMidi } from './pitch.js';
 
-const GATE_RMS = 0.008;
-const MIN_CLARITY = 0.8;
+const GATE_RMS = 0.003;
+const MIN_CLARITY = 0.65;
 
 // Listens to the microphone continuously and reports { midiFloat, rms } every frame.
 export class MicListener {

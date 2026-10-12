@@ -10,7 +10,7 @@ export function rms(buf) {
 }
 
 // YIN pitch detector. Returns { freq, clarity } or null when no clear pitch.
-export function detectPitch(buf, sampleRate, threshold = 0.15) {
+export function detectPitch(buf, sampleRate, threshold = 0.2) {
   const tauMin = Math.floor(sampleRate / MAX_FREQ);
   const tauMax = Math.floor(sampleRate / MIN_FREQ);
   const W = Math.min(Math.floor(buf.length / 2), buf.length - tauMax - 1);

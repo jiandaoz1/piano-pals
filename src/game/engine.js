@@ -1,5 +1,5 @@
 export const CONFIG = {
-  correctHoldMs: 90, // how long the right pitch must be heard to count
+  correctHoldMs: 70, // how long the right pitch must be heard to count
   wrongHoldMs: 170, // wrong pitches must be steadier before we call them wrong
   maxCentsOff: 40, // ignore sounds that sit between two keys
   missesForLetterHint: 3,
