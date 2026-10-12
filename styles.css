@@ -24,8 +24,8 @@ h2 { margin: 0; font-size: clamp(20px, 3.5vw, 34px); }
 .lead { font-size: clamp(18px, 3vw, 28px); margin: 8px 0; text-align: center; }
 .small-text { text-align: center; font-size: 16px; opacity: 0.8; }
 .error { background: #ffe0e0; border-radius: 16px; padding: 10px 16px; max-width: 560px; }
-.logo { width: clamp(120px, 28vw, 220px); animation: bob 2s ease-in-out infinite; }
-.logo.small { width: 100px; }
+.logo { border-radius: 50%; object-fit: cover; border: 5px solid #fff; width: clamp(100px, 20vw, 160px); animation: bob 2s ease-in-out infinite; }
+.logo.small { width: 80px; }
 img.mascot { width: 64px; height: 64px; }
 .big-mascot { font-size: clamp(80px, 16vw, 150px); animation: bob 2s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-12px) rotate(3deg); } }
@@ -44,13 +44,13 @@ img.mascot { width: 64px; height: 64px; }
 .btn.huge { font-size: clamp(26px, 5vw, 44px); padding: 16px 40px; margin-top: 16px; }
 .btn.on { background: #b7f5c0; }
 
-#levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+#levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
 .level {
-  border-radius: 28px; padding: 14px; text-align: center; font-size: 20px; cursor: pointer;
+  border-radius: 28px; padding: 8px; text-align: center; font-size: 16px; cursor: pointer;
   border: 5px solid #fff; box-shadow: 0 6px 0 rgba(59, 42, 107, 0.2);
 }
 .level.selected { transform: scale(1.05); border-color: var(--ink); }
-.level .emoji { font-size: 44px; display: block; }
+.level .emoji { font-size: 28px; display: block; }
 .level small { display: block; opacity: 0.8; }
 #songs { margin-top: 14px; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; align-content: start; padding-bottom: 20px; }
 .song {
