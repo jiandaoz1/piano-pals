@@ -44,15 +44,16 @@ img.mascot { width: 64px; height: 64px; }
 .btn.huge { font-size: clamp(26px, 5vw, 44px); padding: 16px 40px; margin-top: 16px; }
 .btn.on { background: #b7f5c0; }
 
-#levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+#levels { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; flex: none; }
 .level {
-  border-radius: 28px; padding: 8px; text-align: center; font-size: 16px; cursor: pointer;
-  border: 5px solid #fff; box-shadow: 0 6px 0 rgba(59, 42, 107, 0.2);
+  border-radius: 18px; padding: 4px 6px; text-align: center; font-size: 14px; line-height: 1.15; cursor: pointer;
+  border: 3px solid #fff; box-shadow: 0 3px 0 rgba(59, 42, 107, 0.2);
 }
-.level.selected { transform: scale(1.05); border-color: var(--ink); }
-.level .emoji { font-size: 28px; display: block; }
-.level small { display: block; opacity: 0.8; }
-#songs { margin-top: 14px; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; align-content: start; padding-bottom: 20px; }
+.level.selected { transform: scale(1.03); border-color: var(--ink); }
+.level .emoji { font-size: 22px; display: block; }
+.level small { display: none; }
+@media (max-width: 700px) { #levels { grid-template-columns: repeat(3, 1fr); } }
+#songs { margin-top: 12px; flex: 1; min-height: 0; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; align-content: start; padding-bottom: 20px; }
 .song {
   background: #fff; border-radius: 22px; padding: 12px 16px; font-size: 19px; cursor: pointer;
   display: flex; justify-content: space-between; align-items: center; gap: 8px;
